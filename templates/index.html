@@ -70,19 +70,20 @@
         <!-- Section 16: Interactive Controls -->
         <div class="control-group">
           <label class="control-label" for="ctrl-method">
-            <i class="fa-solid fa-filter"></i> Sampling Method
+            <span><i class="fa-solid fa-filter text-teal"></i> Sampling Method</span>
           </label>
           <select id="ctrl-method" class="form-select">
-            <option value="baseline" selected>Notebook Baseline Sample (n=100)</option>
-            <option value="srs">Simple Random Sampling (SRS)</option>
-            <option value="systematic">Systematic Sampling (Interval k)</option>
-            <option value="stratified">Stratified Sampling (Proportional)</option>
+            <option value="baseline" selected>Baseline Sample (n=100)</option>
+            <option value="srs">Simple Random (SRS)</option>
+            <option value="systematic">Systematic (Interval k)</option>
+            <option value="stratified">Stratified (Proportional)</option>
           </select>
         </div>
 
         <div class="control-group">
           <label class="control-label" for="ctrl-sample-size">
-            <i class="fa-solid fa-users"></i> Sample Size (n): <span id="val-sample-size" class="badge-number">100</span>
+            <span><i class="fa-solid fa-users text-teal"></i> Sample Size (n):</span>
+            <span id="val-sample-size" class="badge-number">100</span>
           </label>
           <input type="range" id="ctrl-sample-size" min="10" max="1000" step="10" value="100" class="form-range">
           <div class="range-labels">
@@ -95,7 +96,7 @@
 
         <div class="control-group">
           <label class="control-label" for="ctrl-seed">
-            <i class="fa-solid fa-dice"></i> Random Seed
+            <span><i class="fa-solid fa-dice text-teal"></i> Random Seed</span>
           </label>
           <div class="input-with-button">
             <input type="number" id="ctrl-seed" value="42" class="form-input" placeholder="e.g. 42">
@@ -107,14 +108,20 @@
 
         <div class="control-group">
           <label class="control-label" for="ctrl-threshold">
-            <i class="fa-solid fa-clock-rotate-left"></i> Wait Threshold: <span id="val-threshold" class="badge-number">60 min</span>
+            <span><i class="fa-solid fa-clock-rotate-left text-teal"></i> Wait Threshold:</span>
+            <span id="val-threshold" class="badge-number">60 min</span>
           </label>
           <input type="range" id="ctrl-threshold" min="15" max="180" step="5" value="60" class="form-range">
+          <div class="range-labels">
+            <span>15 min</span>
+            <span>90 min</span>
+            <span>180 min</span>
+          </div>
         </div>
 
         <div class="control-group">
           <label class="control-label" for="ctrl-bootstrap-iters">
-            <i class="fa-solid fa-repeat"></i> Bootstrap Iterations
+            <span><i class="fa-solid fa-repeat text-teal"></i> Bootstrap Iterations</span>
           </label>
           <select id="ctrl-bootstrap-iters" class="form-select">
             <option value="500">500 Iterations</option>
@@ -126,7 +133,7 @@
 
         <div class="control-group">
           <label class="control-label" for="ctrl-group-var">
-            <i class="fa-solid fa-layer-group"></i> Group Variable
+            <span><i class="fa-solid fa-layer-group text-teal"></i> Group Variable</span>
           </label>
           <select id="ctrl-group-var" class="form-select">
             <option value="SEX_LABEL" selected>Patient Sex (Female vs Male)</option>
@@ -142,7 +149,7 @@
             <i class="fa-solid fa-bolt"></i> Run Sampling Lab
           </button>
           <button class="btn btn-danger-outline btn-block" id="btn-reset-analysis">
-            <i class="fa-solid fa-arrow-rotate-left"></i> Reset to Notebook Baseline
+            <i class="fa-solid fa-arrow-rotate-left"></i> Reset to Baseline
           </button>
         </div>
 
