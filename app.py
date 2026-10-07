@@ -200,7 +200,7 @@ def get_distribution():
         {"name": "16–30 min (Moderate)", "count": c_16_30, "pct": round(c_16_30 / n_total * 100, 1), "color": "#06B6D4"},
         {"name": "31–60 min (Extended)", "count": c_31_60, "pct": round(c_31_60 / n_total * 100, 1), "color": "#F59E0B"},
         {"name": "61–120 min (Long Wait)", "count": c_61_120, "pct": round(c_61_120 / n_total * 100, 1), "color": "#EF4444"},
-        {">120 min": "Critical Long Wait (>2 hrs)", "name": ">120 min (Critical)", "count": c_gt_120, "pct": round(c_gt_120 / n_total * 100, 1), "color": "#991B1B"}
+        {"name": ">120 min (Critical)", "count": c_gt_120, "pct": round(c_gt_120 / n_total * 100, 1), "color": "#991B1B"}
     ]
 
     return jsonify({
